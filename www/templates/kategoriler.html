@@ -1,0 +1,17 @@
+<ion-view view-title="KATEGORİLER">
+  <ion-content>
+    <h1>KATEGORİLER</h1>
+    <h3>{{tekbilgi}}</h3>
+    <h5>{{coklubilgi}}</h5>
+    <ion-list>
+      <ion-item ng-repeat="oge in coklubilgi">
+        <b>{{oge.okulno}}</b>-{{oge.ad}} {{oge.soyad}}
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item ng-repeat="oge in kategoriler" >
+        {{oge.baslik}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
