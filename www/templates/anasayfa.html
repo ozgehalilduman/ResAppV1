@@ -1,5 +1,21 @@
 <ion-view view-title="ANASAYFA">
-  <ion-content>
-    <h1>ANASAYFA</h1>
+  <ion-content scroll="false">
+    <ion-slides options="options" slider="data.slider">
+      <ion-slide-page ng-repeat="r in resimler">
+        <div class="box"><img class="slideresim" src="img/{{r.resim}}" alt=""></div>
+      </ion-slide-page>      
+    </ion-slides>
+    <div class="anasayfaisimyeri">
+      <div class="anasayfaisim satir1">SARDUNYA</div>
+      <div class="anasayfaisim satir2">Ev Yemekleri & Mantı</div>     
+    </div>
+    <div class="buttonyeri">
+      <div class="button-bar">
+          <a class="button icon ion-ios-bookmarks-outline"><br>Menu</a>
+          <a class="button icon ion-ios-time-outline"><br>Rezervasyon</a>
+          <a class="button icon ion-ios-telephone-outline"><br>iletişim</a>
+        </div>
+    </div>
+    
   </ion-content>
 </ion-view>

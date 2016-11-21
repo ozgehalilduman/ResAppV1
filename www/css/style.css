@@ -1,1 +1,47 @@
 /* Empty. Add your own CSS if you like */
+.slider{height: 100%}
+.slideresim{width: 100% !important;height: 100% !important}
+.box{height: 100%;}
+.anasayfaisimyeri{
+    position: absolute;
+    top:30%;
+    height: 200px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:999
+}
+.anasayfaisim{    
+    font-family: "djb_happilyeverafterregular";    
+    color:#fff;
+    text-shadow: 2px 2px 2px #000;
+    margin-top:40px;
+    text-align: center;
+    color: #00e9ff;
+
+}
+.anasayfaisim.satir1{font-size:40px;margin-top: 65px;  }
+.anasayfaisim.satir2{font-size:25px;text-align: right;margin-right: 40px}
+.buttonyeri{
+    position: absolute;
+    bottom:0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index:999;
+}
+.buttonyeri>.button-bar{
+    height: 100% !important;
+    font-family:"djb_happilyeverafterregular";
+ }
+ .buttonyeri>.button-bar>.button{
+    font-size: 20px;
+    padding: 0px;
+ }
+ /*buttonbardaki iconları buyutmek için*/
+ .button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before{
+     font-size:44px;
+     color:#00e9ff;
+     text-shadow: 1px 1px 2px #000;
+ }

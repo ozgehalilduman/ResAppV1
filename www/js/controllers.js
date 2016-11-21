@@ -53,21 +53,28 @@ angular.module('starter.controllers', [])
 })
 //orjinaller yukarısı
 //benim değiştirdiklerim
-.controller('kategorilerCtrl', function($scope, $stateParams) {
+.controller('kategorilerCtrl', function($scope, $stateParams,Servisler) {
   $scope.tekbilgi="TEK BİLGİ";
   $scope.coklubilgi=[
     {ad:'osman',soyad:'AYAZ',okulno:'2007'},
     {ad:'murat',soyad:'AKALAN',okulno:'2011'}
   ];
-  $scope.kategoriler = [
-    { baslik: 'KAHVALTILIKLAR', id: 1,resim:"kahve.png",arkaplan:"kahvalti_bg.jpg"},
-    //{ baslik: 'APERATİFLER', id: 2 },
-    { baslik: 'ÇORBALAR', id: 3,resim:"corba.png",arkaplan:"corba_bg.jpg"},
-    { baslik: 'SALATALAR', id: 4,resim:"salata.png",arkaplan:"salata_bg.jpg" },
-    //{ baslik: 'İÇECEKLER', id: 5 },
-    { baslik: 'TATLILAR', id: 6,resim:"tatli.png",arkaplan:"tatli_bg.jpg" }
-  ];
+  $scope.kategoriler =Servisler.MenuGetir();
+})
+.controller('anasayfaCtrl', function($scope, Servisler) {
+  $scope.options = {
+      autoplay:true,
+      pagination: '.slider_nav',
+      loop: true,
+      effect: 'fade',
+      speed: 1500,
+    }
+  $scope.$on("$ionicSlides.sliderInitialized", function(event, data){
+    // data.slider is the instance of Swiper
+    $scope.slider = data.slider;
+  });
 
+  $scope.resimler=Servisler.SlideResimGetir();
 })
 //son kısımda orjinal
 .controller('PlaylistCtrl', function($scope, $stateParams) {
