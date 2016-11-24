@@ -1,14 +1,10 @@
 angular.module('starter.services', [])
 
-.factory('Servisler', function() {
+.factory('Servisler', function($http) {
     return{
-        MenuKategoriGetir:function(){
-            return [
-                    { baslik: 'KAHVALTILIKLAR', id: 1,resim:"kahve.png",arkaplan:"kahvalti_bg.jpg"},                   
-                    { baslik: 'ÇORBALAR', id: 2,resim:"corba.png",arkaplan:"corba_bg.jpg"},
-                    { baslik: 'SALATALAR', id: 3,resim:"salata.png",arkaplan:"salata_bg.jpg" },
-                    { baslik: 'TATLILAR', id: 4,resim:"tatli.png",arkaplan:"tatli_bg.jpg" }
-                ];
+        MenuKategoriGetir:function(scope){
+            var $promise=$http.get("data/menuKategori.json");
+            $promise.then(function(msg){scope.menuKategori=msg.data;});
         },
         SlideResimGetir:function(){
             return [

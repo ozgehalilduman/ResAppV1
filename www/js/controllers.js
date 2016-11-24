@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
     {ad:'osman',soyad:'AYAZ',okulno:'2007'},
     {ad:'murat',soyad:'AKALAN',okulno:'2011'}
   ];
-  $scope.kategoriler =Servisler.MenuKategoriGetir();
+  $scope.menuKategori =Servisler.MenuKategoriGetir($scope);
 })
 .controller('anasayfaCtrl', function($scope, Servisler) {
   $scope.options = {
