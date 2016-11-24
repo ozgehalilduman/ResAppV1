@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
     {ad:'osman',soyad:'AYAZ',okulno:'2007'},
     {ad:'murat',soyad:'AKALAN',okulno:'2011'}
   ];
-  $scope.kategoriler =Servisler.MenuGetir();
+  $scope.kategoriler =Servisler.MenuKategoriGetir();
 })
 .controller('anasayfaCtrl', function($scope, Servisler) {
   $scope.options = {
@@ -72,6 +72,12 @@ angular.module('starter.controllers', [])
   $scope.$on("$ionicSlides.sliderInitialized", function(event, data){
     // data.slider is the instance of Swiper
     $scope.slider = data.slider;
+  });
+  $scope.$on("$ionicSlides.slideChangeEnd", function(event, data){
+    // note: the indexes are 0-based
+    $scope.activeIndex = data.slider.activeIndex;
+    $scope.previousIndex = data.slider.previousIndex;
+    console.info(data.slider);
   });
 
   $scope.resimler=Servisler.SlideResimGetir();

@@ -2,7 +2,7 @@ angular.module('starter.services', [])
 
 .factory('Servisler', function() {
     return{
-        MenuGetir:function(){
+        MenuKategoriGetir:function(){
             return [
                     { baslik: 'KAHVALTILIKLAR', id: 1,resim:"kahve.png",arkaplan:"kahvalti_bg.jpg"},                   
                     { baslik: 'ÇORBALAR', id: 2,resim:"corba.png",arkaplan:"corba_bg.jpg"},
