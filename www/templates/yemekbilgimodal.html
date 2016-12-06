@@ -1,0 +1,24 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-balanced">
+    <h1 class="title">YEMEK BİLGİ</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="YemekBilgiModalKapat()">KAPAT</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="modal_arkaplan">
+    <div class="modal_resim"  style="height:200px;background: url('../img/{{secilenYemek.resim_k}}.jpg') no-repeat;background-size: cover;"></div>
+    <div class="modal_yemekbilgi"></div>
+    <p class="yad">{{secilenYemek.ad}}</p>
+    <div class="yaltkategori">{{secilenYemek.altkategori}}</div>
+    <p class="yaciklama">{{secilenYemek.aciklama}}</p>          
+  </ion-content>
+  <ion-footer-bar align-title="left" class="bar-assertive">
+  <div class="buttons">
+    <button class="button">İPTAL</button>
+  </div>
+  <h1 class="title" style="text-align:center;font-family:'calligraffitti';font-weight: 900;text-shadow: 1px 1px 3px #000;">{{secilenYemek.fiyat}} {{secilenYemek.fiyatbirim}}</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Siparis Ver</button>
+  </div>
+</ion-footer-bar>
+</ion-modal-view>

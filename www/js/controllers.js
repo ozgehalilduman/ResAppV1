@@ -82,6 +82,31 @@ angular.module('starter.controllers', [])
 
   $scope.resimler=Servisler.SlideResimGetir();
 })
+.controller('gununmenusuCtrl', function($scope, Servisler) {
+  $scope.yemeklistesi=Servisler.YemekListesiGetir($scope);
+})
+.controller('yemeklistesiCtrl', function($scope, Servisler,$stateParams,$ionicModal) {
+  $scope.yemeklistesi=Servisler.YemekListesiGetir($scope); 
+  $scope.filtrele={'kategori':$stateParams.kategori};
+  $scope.siparis=false;
+  $scope.siparisVer=function(yemek){
+    yemek.siparis=!yemek.siparis;
+  }
+  //modal kısmı
+  $ionicModal.fromTemplateUrl('templates/yemekbilgimodal.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.yemekbilgiModalGoster=function(yemek){
+     $scope.secilenYemek=yemek;
+     $scope.modal.show();
+  }
+  $scope.YemekBilgiModalKapat=function(){
+     $scope.modal.hide();
+  }
+})
+
 //son kısımda orjinal
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

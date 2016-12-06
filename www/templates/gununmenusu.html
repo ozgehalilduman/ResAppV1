@@ -1,0 +1,12 @@
+<ion-view view-title="GUNUN MENUSU">
+  <ion-content class="gununmenusu">
+    <h1>Günün Menüsü</h1>
+   <ion-list>
+      <ion-item ng-repeat="yemek in yemeklistesi|filter:{'gununmenusu':'1'}">
+        * {{yemek.ad}}
+      </ion-item>
+    </ion-list>
+    <h5>Afiyet Olsun</h5>
+    <a class="button button-full button-karatahta" href="#/app/kategoriler">Başka Ne Yiyebilirim ?</a>
+  </ion-content>
+</ion-view>

@@ -74,6 +74,24 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     }
   }
 })
+.state('app.gununmenusu', {
+  url: '/gununmenusu',
+  views: {
+    'menuContent': {
+      templateUrl: 'templates/gununmenusu.html',
+      controller:"gununmenusuCtrl"
+    }
+  }
+})
+.state('app.yemeklistesi', {
+  url: '/yemeklistesi/:kategori',
+  views: {
+    'menuContent': {
+      templateUrl: 'templates/yemeklistesi.html',
+      controller:"yemeklistesiCtrl"
+    }
+  }
+})
 //orjinaller
   .state('app.search', {
     url: '/search',

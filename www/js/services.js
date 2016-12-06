@@ -14,6 +14,10 @@ angular.module('starter.services', [])
                 {resim:'r4.jpg'},
                 {resim:'r5.jpg'}
             ];
+        },
+        YemekListesiGetir:function(scope){
+            var $promise=$http.get("data/yemekler.json");
+            $promise.then(function(msg){scope.yemeklistesi=msg.data;});
         }
     }
 });

@@ -45,3 +45,102 @@
      color:#00e9ff;
      text-shadow: 1px 1px 2px #000;
  }
+ /*KATEGORİ KISMINDAKİ SORUN İÇİN*/
+ 
+ /*Gunun Menusu kısmı*/
+ .gununmenusu{
+     background: url('../img/karatahta.png') no-repeat;
+     background-size: cover; 
+     padding: 30px; 
+     text-shadow: 1px 1px 2px #000;   
+ }
+ .gununmenusu h1{
+     color:#fff !important;
+     font-family:"djb_happilyeverafterregular";
+     font-size:50px;
+     margin-top:20px;
+     color: yellow !important;
+     border-bottom: 2px dashed snow
+ }
+ .gununmenusu h5{font-family:"djb_happilyeverafterregular";
+     margin-top:20px;
+     color: yellow !important;
+     text-align: right;
+     font-size:23px;
+     font-weight: 600}
+.gununmenusu a{
+    font-family: "djb_happilyeverafterregular";
+    margin-top: 20px;
+    text-align: cwnter;
+    font-size: 19px;
+    background-image: url(../img/chalkboard_bg.jpg);
+    border: 2px solid #67b7ec;
+    border-radius: 100px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;    
+}
+.gununmenusu a:hover{color:yellow;}
+.gununmenusu div{background-color: rgba(240, 248, 255, 0);}
+.gununmenusu div ion-item{
+    background-color: rgba(240, 248, 255, 0);     
+    color:#fff !important;
+    font-family:"djb_happilyeverafterregular";
+    border:0px;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 2px;
+ }
+ /*YEMEKLER*/
+.yemek{
+    padding:0px;
+    height: 200px;
+}
+.yemek div{width: 50%;font-size:12px;}
+
+.yemek .bolme{height: 100%;background-color:    #373636;color:#fff; padding-left:20px; }
+.resim{}
+.yemek .ybilgi div,.yemek .ybilgi p{text-shadow:1px 1px 2px #000;font-family:'raleway', sans-serif;}
+.yad{
+    font-family: 'calligraffitti', cursive !important;
+    font-size:24px !important;
+    margin-top: 10px !important;
+    color:#fff !important;
+    line-height: 33px;
+}
+.yaltkategori{
+    margin-top:6px !important;
+    color:#e87761 !important;
+    font-weight: 900;
+}
+.yaciklama{font-size:11px !important;text-indent:20px;color:#ccc !important;white-space: normal !important}
+.ybirim,.yfiyat{
+    margin-left:-10px !important;
+    padding-left: 22px;
+    padding-right: 12px;
+    width:93% !important;
+    border-top: 1px solid #5d5a5a;
+    color:#ccc !important;
+    white-space: normal !important;
+    font-size:11px !important;
+}
+.yfiyat{
+    font-family: 'calligraffitti', cursive !important;
+    text-align: center;
+    color:#fff !important;
+    font-weight: 900;
+    line-height: 30px;
+    font-size:20px !important;
+    border:0 !important;
+}
+.yemek:nth-child(odd) .bolme{float:left}
+.yemek:nth-child(even) .bolme{float:right}
+.ybilgi{position: relative}
+.y_info{position: absolute !important;left:0;}
+.y_siparis{position: absolute !important;right:0;}
+.y_info:before,.y_siparis:before{font-size:30px !important}
+.y_info:before{color:#ffc900 !important}
+.yemeksiparisVer{background-color:#2b7532 !important}
+ /*YEMEKLER-MODAL*/
+ .modal_arkaplan{color:#fff !important; background-color:#373636}
+ /**/
